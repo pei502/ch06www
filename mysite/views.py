@@ -12,5 +12,15 @@ def index(request, tvno = 0):
     tv = tv_list[tvno]
     return render(request, 'index.html', locals())
 
+def engtv(request, tvno='0'):
+    tv_list = [{'name':'SkyNews', 'tvcode':'9Auq9mYxFEE'},
+               {'name':'Al Jazeera', 'tvcode':'-upyPouRrB8'},
+               {'name':'French 24', 'tvcode':'HeTWwH1a0CQ'},
+               {'name':'DW News', 'tvcode':'qMtcWqCL_UQ'},]
+    now = datetime.now()
+	tvno = tvno
+	tv = tv_list[int(tvno)]
+	return render(request, 'engtv.html', locals())
+
 
 # Create your views here.

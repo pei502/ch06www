@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('<int:tvno>/', views.index, name='tv-url'),
+    path('engtv/', views.engtv),
+    path('engtv/<int:tvno>/', views.engtv, name='engtv-url'),
 ]
